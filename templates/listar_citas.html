@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Registro de citas
+
+    {{super() }}
+{% endblock %}
+
+{% block content %}
+            <!-- Esto ira al medio de la ventana de forma vertical y horizontal -->
+            <div class="row flotador2">
+                <div class="col-12">
+                    <div class="row m-1 align-items-center">
+                        <div class="col-6">
+                            <h2 class="titu"> Registro de citas </h2>
+                        </div>
+                        <div class="col-3">
+                            <form action="">
+                                <input class="form-control" type="search" id="buscar" placeholder="Buscar por apellidos">
+                                <label id="search" class="icon"> L </label>
+                            </form>
+                        </div>
+                        <div class="col-3" id="filtro">
+                            <h5> <a href="">  </a>  </h5>
+                            <h5> <a href=""> Dia </a>  </h5>
+                            <h5> <a href=""> Semana </a>  </h5>
+                            <h5> <a href=""> Mes </a>  </h5>
+                            <h5> <a href=""> Todos </a>  </h5>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-12 filtro">
+                                <h6 class="sub-Filtros"> Filtrar por: </h6>
+                                <a href="#" class="btn btn-outline-secondary btn-sm sub-Filtros"> Categoria </a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm sub-Filtros"> ASC / DESC </a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm sub-Filtros"> Recientes </a>
+                                <a href="#" class="btn btn-danger btn-sm sub-Filtros"> Ver Agenda </a>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row text-center">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Nombres </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Apellidos </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Email </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Celular </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Categoria </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Fecha Cita </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Hora </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Nota </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> Creado </th>
+                                    <th scope="col" style="font-size: 15px; background-color: rgb(7, 47, 73); color: #fff;"> </th>
+                                </tr>
+                            </thead>
+                            
+                            {% for cita in citas %}
+                            <tbody>
+                                <tr>
+                                    <td style="font-size: 14px;"> {{cita.1}} </td>
+                                    <td style="font-size: 14px;"> {{cita.2}} </td>
+                                    <td style="font-size: 14px;"> {{cita.3}} </td>
+                                    <td style="font-size: 14px;"> {{cita.4}} </td>
+                                    <td style="font-size: 14px;"> {{cita.5}} </td>
+                                    <td style="font-size: 14px;"> {{cita.6}} </td>
+                                    <td style="font-size: 14px;"> {{cita.7}} </td>
+                                    <td style="font-size: 14px;"> {{cita.8}} </td>
+                                    <td style="font-size: 14px;"> {{cita.9}} </td>
+                                    <td style="font-size: 14px;"> <a href="#" class="btn btn-outline-danger btn-sm"> Estado </a> </td>
+                                </tr>
+                            </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Fin del contenido central-->
+
+{% endblock %}
