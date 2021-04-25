@@ -2,15 +2,16 @@
 <html lang="es">
     <head>
         <meta charset="utf-8"> 
-        <title> {% block title %} | Kosmika Box Media {% endblock %}  </title>
+        <title> {% block title %} | Duilio Restuccia {% endblock %}  </title>
         
-        <link rel="icon" type="favicon/x-icon" href="{{ url_for('static', filename='css/kosmika.png') }}">
+        <!-- <link rel="icon" type="favicon/x-icon" href="{{ url_for('static', filename='css/kosmika.png') }}"> -->
 
         <!-- Enlaces Remotos para Bootstrap y CSS 
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
         -->
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Enlaces locales para Bootstrap y CSS -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
@@ -26,7 +27,7 @@
                     <br>
                     <br>
                     <br>
-                    <h6> Aplicacion de citas para Asesoramiento - {{ now.month }} / {{ now.year }}  </h6>
+                    <h6> 0{{ now.month }} - {{ now.year }}  </h6>
                 </div>
             </footer>
         </div>
