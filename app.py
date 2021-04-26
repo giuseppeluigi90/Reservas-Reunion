@@ -16,7 +16,7 @@ app.secret_key = 'clave_secreta_flask'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '2702'
-app.config['MYSQL_DB'] = 'kosmika_Asesoria'
+app.config['MYSQL_DB'] = 'reservas_reunion'
 
 mysql = MySQL(app)
 
@@ -33,10 +33,9 @@ def crear_cita():
     
     if request.method == 'POST':
         nombres = request.form['nombres']
-        apellidos = request.form['apellidos']
         email = request.form['email']
         celular = request.form['celular']
-        categoria = request.form['categoria']
+        tema = request.form['tema']
         fecha_cita = request.form['fecha_cita']
         hora_cita = request.form['hora_cita']
         nota = request.form['nota']
@@ -45,8 +44,8 @@ def crear_cita():
         # fecha_cita = datetime.now()
         # hora_cita = datetime.now()
         cursor = mysql.connection.cursor()
-        cursor.execute("INSERT INTO registros VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s)", 
-                        (nombres, apellidos, email, celular, categoria, fecha_cita, hora_cita, nota, created_at))
+        cursor.execute("INSERT INTO registros VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s)", 
+                        (nombres, email, celular, tema, fecha_cita, hora_cita, nota, created_at))
         cursor.connection.commit()
         flash('Se ha registrado tú cita correctamente. Gracias.')
         return render_template('UI.html')

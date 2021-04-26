@@ -31,76 +31,89 @@
 
         <!-- Esto ira al medio de la ventana de forma vertical y horizontal -->
         <div class="container"> 
-            <div class="flotador">
+            <div class="flotador" style="height: 97vh; margin: 5px auto;">
                 <div class="col-12">
                     <div class="row m-1">
-                        <h2 class="titu"> Programa tú Reunión </h2>
-                        <hr>
-                    </div>
-                    <form action="" method="POST" onsubmit="return ValidaCampos(this)" class="row g-3" name="registro" >
-                        <div class="col-md-4">
-                            <label for="nombres" class="form-label"> Nombres: </label>
-                            <input type="text" class="form-control" name="nombres" placeholder="Escriba aquí sus nombres" required>
-                        </div>
-                        <div class="col-md-8">
-                          <label for="apellidos" class="form-label"> Apellidos: </label>
-                          <input type="text" class="form-control" name="apellidos" placeholder="Escriba aquí sus apellidos">
-                        </div>
-
-                        <div class="col-md-8">
-                            <label for="email" class="form-label"> Email: </label>
-                            <input type="text" class="form-control" name="email" placeholder="Escriba aquí su correo electronico" required>
-                        </div>
-                        <div class="col-md-4">
-                          <label for="celular" class="form-label"> Celular: </label>
-                          <input type="text" class="form-control" size="9" maxlength="9" name="celular" placeholder="Escriba aquí su número">
-                        </div>
-
-                        <div class="col-md-6">
-                          <label for="categoria" class="form-label"> Tema: </label>
-                          <select class="form-select" name="categoria" id="">
-                              <option selected> Seleccione... </option>
-                              <option value="AFILIADO"> Ser AFILIADO (Vender cursos digitales) </option>
-                              <option value="PRODUCTOR"> Ser PRODUCTOR (hacer cursos digitales) </option>
-                          </select>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="fecha" class="form-label"> Fecha: </label>
-                            <input class="form-control" type="date" name="fecha_cita" id="fecha_cita">
-                        </div>
-                        <div class="col-md-2">
-                            <label for="hora" class="form-label"> Hora: </label>
-                            <input class="form-control" type="time" name="hora_cita" id="hora_cita">
-                        </div>
-
                         <div class="col-md-12">
-                            <label for="nota" class="form-label"> Ingrese un comentario: (Opcional) </label>
-                            <!-- <input class="form-control" type="textarea" name="nota" placeholder="Indica el medio de contacto que prefieras: Conversar por Whatsapp, chatea por Telegram, Email, Veamonos por Zoom..."> -->
-                            <textarea class="form-control" name="nota" cols="30" rows="2" placeholder="Indica el medio de contacto que prefieras: Conversar por Whatsapp, chatea por Telegram, Email, Veamonos por Zoom..."></textarea>
+                            <h2 class="titu" style="font-weight: bold; letter-spacing: -1px;;"> INGRESOS PASIVOS CASI SIN ESFUERZO </h2>
+                            <h4 class="" style="font-weight: bold; font-size: 25px; letter-spacing: -1px;"> (DECIDE: CÓMO Y DESDE CUANDO) </h4>
+                        </div>
+                    </div>
+                    <form action="" method="POST" onsubmit="return ValidaCampos(this)" class="row" name="registro" >
+                        <div class="row" style="margin: 0px; padding: 3px; background-color: crimson;">
+                            <div class="col-md-2"> 
+
+                            </div>
+                            <div class="col-md-5">
+                                <input type="radio" class="" name="tema" id="afiliado" value="AFILIADO" required>
+                                <label style="color: #fff; font-size: 25px; margin-bottom: -10px;" for="afiliado" class="form-label"> Ser AFILIADO </label> <br>
+                                <label style="color: #ccc;" for="afiliado" class="form-label"> (Vender cursos digitales) </label> <br> 
+                            </div>
+                            <div class="col-md-5">
+                                <input type="radio" class="" name="tema" id="productor" value="PRODUCTOR" required>
+                                <label style="color:  #fff; font-size: 25px; margin-bottom: -10px;" for="productor" class="form-label"> Ser PRODUCTOR </label> <br>
+                                <label style="color: #ccc;" for="productor" class="form-label"> (hacer cursos digitales) </label> <br>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row m-1">
+                            <div class="col-md-4">
+                                <label for="celular" class="form-label"> Celular: </label>
+                                <input type="text" class="form-control" size="9" maxlength="9" name="celular" placeholder="Si quieres ganar dinero..." required>
+                            </div>
+                            <div class="col-md-2">
+        
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label"> Email: </label>
+                                <input type="text" class="form-control" name="email" placeholder="Correo electronico + usado...">
+                            </div>
                         </div>
 
-                        <div class="col-9">
-                          
+                        <div class="row m-2">
+                            <div class="col-md-4">
+                                <label for="nombres" class="form-label"> Nombres: </label>
+                                <input type="text" class="form-control" name="nombres" placeholder="Escriba aqui un nombre..." required>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-4">
+                                <label for="fecha" class="form-label"> Fecha: </label>
+                                <input class="form-control" type="date" name="fecha_cita" id="fecha_cita">
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-2">
+                                <label for="hora" class="form-label"> Hora: </label>
+                                <input class="form-control" type="time" name="hora_cita" id="hora_cita">
+                            </div>
                         </div>
-                        <div class="col-1">
-                            <button type="submit" class="btn btn-outline-danger btn-sm f-right"> Cancelar </button>
-                          </div>
-                          <div class="col-2">
-                                <input class="btn btn-outline-primary btn-sm f-right" type="submit" value="Guardar" onClick="ValidaCampos(email.value, celular.value);">
-                                <!-- <button type="submit" class="btn btn-outline-primary btn-sm f-right"> Guardar </button> -->
-                          </div>
+                        <div class="row m-2">
+                            <div class="col-md-10">
+                                <label for="nota" class="form-label"> Ingrese un comentario: (Obligatorio) </label>
+                                <textarea class="form-control" name="nota" cols="30" rows="6" required
+                                 placeholder="Usa este espacio para PREGUNTAR e indicar el medio para RESPONDERTE:&#10;1.-Conversación por WhatsApp&#10;2.-Reunión por Zoom&#10;3.-Por Email (sí aún lo lees)&#10; &#10;ADVERTENCIA: No hay forma facil de ganar dinero, solo formas inteligentes de hacerlo!"></textarea>
+                            </div>
+                            <div class="col-md-2">
+                                <input style="margin-top: 90px; margin-right: 20px;" class="btn btn-outline-primary btn f-right" type="submit" value="Enviar" onClick="ValidaCampos(email.value, celular.value);">
+                            </div>
+                        </div>
+                    </form> 
                             {% with messages = get_flashed_messages() %}
                                 {% if messages %}
                                     {% for message in messages %}
                                         <div class="message alert-success"> 
-                                            <h5> {{message}} </h5> 
+                                            <script>
+                                                alert('Gracias por rellenar nuestro formulario correctamente.');
+                                            </script>
                                         </div>
                                     {% endfor%}
                                 {% endif %}
                             {% endwith %}
-                      </form>
+                         
                 </div>
-                
             </div>
             <!-- Fin del contenido central-->
         </div>
